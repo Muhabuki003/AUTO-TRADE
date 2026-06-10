@@ -73,6 +73,13 @@ def main():
     bot.register_agent("regime", RegimeAgent())
     bot.register_agent("monitor", MonitorAgent())
 
+    # Register GLM-OCR vision module (reads charts, statements, docs)
+    zhipu_key = os.environ.get("ZHIPU_API_KEY")
+    if zhipu_key:
+        bot.register_vision(api_key=zhipu_key)
+    else:
+        logger.warning("ZHIPU_API_KEY not set — vision module disabled")
+
     # Print agent status
     print(f"\n  🤖 Agents: {len(bot.agents)} registered")
     print(f"  🧠 Memory: Learning from every trade")

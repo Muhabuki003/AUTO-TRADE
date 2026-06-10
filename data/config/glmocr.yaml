@@ -1,0 +1,12 @@
+# GLM-OCR Configuration
+# Get API key from https://open.bigmodel.cn or https://z.ai
+# Set ZHIPU_API_KEY in your .env or environment
+
+pipeline:
+  maas:
+    enabled: true
+    api_key: ${ZHIPU_API_KEY}
+    # api_url: https://open.bigmodel.cn/api/paas/v4  # Default
+
+logging:
+  level: INFO

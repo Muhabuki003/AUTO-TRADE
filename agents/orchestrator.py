@@ -29,6 +29,7 @@ class AutoTradeOrchestrator:
             "started_at": None,
         }
         self.agents = {}
+        self.vision = None
         logger.info(f"AutoTrade v0.1 initialized — ${self.state['capital']} → ${self.state['target']}")
 
     def _load_config(self, path: str) -> dict:
@@ -44,6 +45,12 @@ class AutoTradeOrchestrator:
         """Register an agent with the orchestrator."""
         self.agents[name] = agent
         logger.info(f"Agent registered: {name}")
+
+    def register_vision(self, api_key: str = None) -> None:
+        """Register GLM-OCR vision module for chart/doc reading."""
+        from agents.vision import ChartReader
+        self.vision = ChartReader(api_key=api_key)
+        logger.info("GLM-OCR Vision module registered")
 
     def run(self, mode: str = "backtest") -> None:
         """Run the bot in the specified mode."""
