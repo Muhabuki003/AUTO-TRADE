@@ -1,5 +1,8 @@
 # AUTO-TRADE 🤖
 
+[![CI](https://github.com/Muhabuki003/AUTO-TRADE/actions/workflows/autotrade.yml/badge.svg)](https://github.com/Muhabuki003/AUTO-TRADE/actions/workflows/autotrade.yml)
+[![Pages](https://img.shields.io/badge/dashboard-live-6366F1)](https://autotrade-bra.pages.dev)
+
 A self-learning trading bot with memory — it understands when it makes a mistake, saves it to memory, and never makes the same mistake twice.
 
 **Give it $30. Tell it to turn into $100. Watch it learn.**
