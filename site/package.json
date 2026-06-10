@@ -1,0 +1,6 @@
+{
+  "name": "AUTO-TRADE",
+  "description": "Self-learning trading bot with memory",
+  "repository": "https://github.com/Muhabuki003/AUTO-TRADE",
+  "main": "site/public/index.html"
+}
