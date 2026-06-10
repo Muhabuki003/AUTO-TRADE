@@ -1,0 +1,12 @@
+# GLM-OCR Config — Self-hosted via VPS Ollama
+# No API costs — runs on our Hetzner VPS (167.233.38.96)
+pipeline:
+  maas:
+    enabled: false
+
+  ocr_api:
+    api_host: 167.233.38.96
+    api_port: 11434
+    api_path: /api/generate
+    model: glm-ocr:latest
+    api_mode: ollama_generate
